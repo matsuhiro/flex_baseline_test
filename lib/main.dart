@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() => runApp(MyApp());
 
@@ -78,38 +79,54 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.baseline,
           textBaseline: TextBaseline.alphabetic,
           children: <Widget>[
-            SizedBox(
-              width: 20,
-              height: 20,
-              child: Image.asset('assets/image_1.jpeg'),
+            Baseline(
+              baseline: 0,
+              baselineType: TextBaseline.alphabetic,
+              child: SizedBox(
+                width: 20,
+                height: 20,
+                child: Image.asset('assets/image_1.jpeg'),
+              ),
             ),
-            Container(
-              width: 30,
-              height: 10,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(
-                  255,
-                  255,
-                  0,
-                  0,
+            Baseline(
+              baseline: 0,
+              baselineType: TextBaseline.alphabetic,
+              child: Container(
+                width: 30,
+                height: 10,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(
+                    255,
+                    255,
+                    0,
+                    0,
+                  ),
                 ),
               ),
             ),
-            Container(
-              width: 30,
-              height: 20,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(
-                  255,
-                  0,
-                  255,
-                  0,
+            Baseline(
+              baseline: 0,
+              baselineType: TextBaseline.alphabetic,
+              child: Container(
+                width: 30,
+                height: 20,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(
+                    255,
+                    0,
+                    255,
+                    0,
+                  ),
                 ),
               ),
             ),
-            Text(
-              'gboldg',
-              style: TextStyle(fontSize: 30),
+            Baseline(
+              baseline: 0,
+              baselineType: TextBaseline.alphabetic,
+              child: Text(
+                'gboldg',
+                style: TextStyle(fontSize: 30),
+              ),
             ),
           ],
         ),
