@@ -74,29 +74,42 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            SizedBox(
+              width: 20,
+              height: 20,
+              child: Image.asset('assets/image_1.jpeg'),
+            ),
+            Container(
+              width: 30,
+              height: 10,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(
+                  255,
+                  255,
+                  0,
+                  0,
+                ),
+              ),
+            ),
+            Container(
+              width: 30,
+              height: 20,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(
+                  255,
+                  0,
+                  255,
+                  0,
+                ),
+              ),
             ),
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              'gboldg',
+              style: TextStyle(fontSize: 30),
             ),
           ],
         ),
